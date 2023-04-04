@@ -1,6 +1,6 @@
 <!--
  * @Date: 2023-03-20 11:27:58
- * @LastEditTime: 2023-04-03 11:16:36
+ * @LastEditTime: 2023-04-04 09:19:07
  * @FilePath: /Rockets/src/pages/Home.vue
  * @Description: 
  * 
@@ -236,10 +236,12 @@
 // import { ref } from "vue";
 import { useHomeStore } from '@/store/home'
 import HelloWorld from '@/components/HelloWorld.vue'
-
+import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 
 const home = useHomeStore();
+
+const router = useRouter();
 
 const { mainTitle,
     firstSmallTitle,
@@ -249,7 +251,7 @@ const { mainTitle,
 
 //返回登录页
 const LoginOut = () => {
-    // useRoute.push("/");
+    router.push("/");
 }
 const toggleShow = () => {
     home.toggleShow();

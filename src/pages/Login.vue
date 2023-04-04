@@ -1,6 +1,6 @@
 <!--
  * @Date: 2023-03-20 11:27:50
- * @LastEditTime: 2023-04-03 10:46:58
+ * @LastEditTime: 2023-04-04 09:11:47
  * @FilePath: /Rockets/src/pages/Login.vue
  * @Description: 
  * 
@@ -41,18 +41,13 @@
     </div>
 </template>
   
-<script lang="ts">
-export default {
-    name: "Login",
-    setup() {
-        return {};
-    },
-    methods: {
-        //跳转到home页面
-        toHome() {
-            this.$router.push("/home");
-        },
-    },
+<script  setup lang="ts">
+import { useRouter } from "vue-router";
+const router = useRouter();
+//跳转到home页面
+const toHome = () => {
+    router.push("/home");
+
 };
 </script>
   
